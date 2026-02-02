@@ -3,29 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Text Page</title>
-    <style>
-        /* Make the body fill the screen and center content */
-        body {
-            display: flex;
-            justify-content: center; /* horizontal centering */
-            align-items: center;     /* vertical centering */
-            height: 100vh;           /* full viewport height */
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0; /* light gray background */
-        }
-
-        /* Style for the text */
-        .centered-text {
-            font-size: 2rem;
-            color: #333;
-        }
-    </style>
+    <title>No Button Disappear</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="centered-text">
-        Hello, this is my centered text!
+    <div class="centered-text">Will you be my Valentine?</div>
+    <div class="choice-container">
+        <a href="yes.html" class="choice-box yes-box">Yes</a>
+        <button class="choice-box no-box">No</button>
     </div>
+
+    <script>
+        const noButton = document.querySelector('.no-box');
+
+        noButton.addEventListener('click', () => {
+            noButton.style.display = 'none'; // hide the button when clicked
+        });
+    </script>
 </body>
 </html>

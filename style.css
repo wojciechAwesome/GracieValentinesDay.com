@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* Background image */
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/images6/Hearts-Background-Desktop.jpg');
+    background-size: cover;      /* makes image cover entire screen */
+    background-position: center; /* center the image */
+    background-repeat: no-repeat;/* prevent tiling */
+}
+
+/* Optional: add a slight overlay for text readability */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3); /* dark overlay */
+    z-index: 0;
+}
+
+.centered-text, .choice-container, .centered-image {
+    position: relative; /* make sure elements appear above overlay */
+    z-index: 1;
+}
+
+/* Rest of your styling remains the same */
+.centered-text {
+    font-size: 2rem;
+    color: white; /* change to white for better contrast */
+    margin-bottom: 20px;
+}
+
+.centered-image {
+    width: 500px;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.choice-container {
+    display: flex;
+    gap: 20px;
+}
+
+.choice-box {
+    padding: 20px 40px;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.yes-box {
+    background-color: #4CAF50;
+}
+
+.yes-box:hover {
+    background-color: #45a049;
+}
+
+.no-box {
+    background-color: #f44336;
+}
+
+.no-box:hover {
+    background-color: #da2c2c;
+}
